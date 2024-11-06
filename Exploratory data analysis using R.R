@@ -1,0 +1,17 @@
+dataset<-read.csv("~/employees.csv") 
+View(dataset)
+head(dataset) 
+tail(dataset)
+str(dataset) 
+summary(dataset) 
+dim(dataset) 
+nrow(dataset) 
+ncol(dataset) 
+glimpse(dataset) 
+hist(dataset$Salary, main = "Salary Distribution", xlab = "Salary", col = "lightblue")
+boxplot(Salary ~ Senior.Management, data = dataset, main = "Salary by Senior Management", 
+        +         xlab = "Senior Management", ylab = "Salary", col = "lightgreen") 
+plot(dataset$Salary, dataset$Bonus, 
+     +      main = "Salary vs. Bonus", xlab = "Salary", ylab = "Bonus", col = "darkred")
+boxplot(dataset$Salary, main = "Salary Outliers", ylab = "Salary", col = "orange")
+boxplot(dataset$Bonus, main = "Bonus Outliers", ylab = "Bonus", col = "lightcoral") 
